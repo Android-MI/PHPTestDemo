@@ -74,9 +74,40 @@ foreach ($students as $v) {
     echo "<br/>";
 }
 foreach ($students as $key => $v) {
-    echo $key.":".$v;
+    echo $key . ":" . $v;
     echo "<br/>";
 }
+
+?>
+
+<?php
+//$url = "http://www.baidu.com";
+//echo " <script   language = 'javascript'
+//type = 'text/javascript'> ";
+//echo " window.location.href = '$url' ";
+//echo " </script > ";
+//
+
+class People
+{
+    public $name = 'test';
+    public $mobile = '13800001111';
+}
+
+$obj = new People();
+$array = array
+(
+    'Name' => urlencode('小米'),
+    'Age' => 20,
+    'people' => $obj
+);
+
+echo json_encode($array);
+?>
+
+<?php
+
+class Car { public $name = 'car'; public function __clone() { $obj = new Car(); $obj->name = $this->name; } } $a = new Car(); $a->name = 'new car'; $b = clone $a; var_dump($b);
 
 ?>
 
